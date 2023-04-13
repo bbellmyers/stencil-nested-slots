@@ -7,24 +7,35 @@
 
     <script type="module" src="/build/stencil-nested-slots.esm.js"></script>
     <script nomodule src="/build/stencil-nested-slots.js"></script>
+    <style>
+      .col2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 8px;
+      }
+    </style>
   </head>
   <body style="background-color: #ddd">
-    <my-component-a>
-      <my-component-b>
-        <p>slotted content</p>
-      </my-component-b>
-      <my-component-b>
-        <p>slotted content</p>
-      </my-component-b>
-    </my-component-a>
-    <hr>
-    <hp5-faq-accordion-container>
-      <hp5-faq-accordion>
-        <p>slotted content</p>
-      </hp5-faq-accordion>
-      <hp5-faq-accordion>
-        <p>slotted content</p>
-      </hp5-faq-accordion>
-    </hp5-faq-accordion-container>
+
+    <section class="col2">
+      <my-component-a>
+        <my-component-b>
+          <p>slotted content</p>
+        </my-component-b>
+        <my-component-b>
+          <p>slotted content</p>
+        </my-component-b>
+      </my-component-a>
+
+      <hp5-faq-accordion-container>
+        <hp5-faq-accordion>
+          <p>slotted content</p>
+        </hp5-faq-accordion>
+        <hp5-faq-accordion>
+          <p>slotted content</p>
+        </hp5-faq-accordion>
+      </hp5-faq-accordion-container>
+    </section>
+    <p><a href="./index.html">client-side only</a> | <a href="./index-hydrated.html">hydrated + client-side</a></p>
   </body>
 </html>

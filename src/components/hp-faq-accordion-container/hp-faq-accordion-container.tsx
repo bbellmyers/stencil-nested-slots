@@ -1,15 +1,15 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'my-component-b',
-  styleUrl: 'my-component-b.css',
+  tag: 'hp5-faq-accordion-container',
+  styleUrl: 'hp-faq-accordion-container.css',
   shadow: true,
 })
-export class MyComponentB {
+export class HpFaqAccordionContainer {
   render() {
     return (
       <Host>
-        <p>my-component-b</p>
+        hp5-faq-accordion-container
         <slot />
       </Host>
     );

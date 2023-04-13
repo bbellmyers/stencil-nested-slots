@@ -9,7 +9,7 @@ export class MyComponentA {
   render() {
     return (
       <Host>
-        Component A
+        my-component-a
         <slot />
       </Host>
     );

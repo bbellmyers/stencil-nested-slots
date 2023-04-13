@@ -6,12 +6,28 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface Hp5FaqAccordion {
+    }
+    interface Hp5FaqAccordionContainer {
+    }
     interface MyComponentA {
     }
     interface MyComponentB {
     }
 }
 declare global {
+    interface HTMLHp5FaqAccordionElement extends Components.Hp5FaqAccordion, HTMLStencilElement {
+    }
+    var HTMLHp5FaqAccordionElement: {
+        prototype: HTMLHp5FaqAccordionElement;
+        new (): HTMLHp5FaqAccordionElement;
+    };
+    interface HTMLHp5FaqAccordionContainerElement extends Components.Hp5FaqAccordionContainer, HTMLStencilElement {
+    }
+    var HTMLHp5FaqAccordionContainerElement: {
+        prototype: HTMLHp5FaqAccordionContainerElement;
+        new (): HTMLHp5FaqAccordionContainerElement;
+    };
     interface HTMLMyComponentAElement extends Components.MyComponentA, HTMLStencilElement {
     }
     var HTMLMyComponentAElement: {
@@ -25,16 +41,24 @@ declare global {
         new (): HTMLMyComponentBElement;
     };
     interface HTMLElementTagNameMap {
+        "hp5-faq-accordion": HTMLHp5FaqAccordionElement;
+        "hp5-faq-accordion-container": HTMLHp5FaqAccordionContainerElement;
         "my-component-a": HTMLMyComponentAElement;
         "my-component-b": HTMLMyComponentBElement;
     }
 }
 declare namespace LocalJSX {
+    interface Hp5FaqAccordion {
+    }
+    interface Hp5FaqAccordionContainer {
+    }
     interface MyComponentA {
     }
     interface MyComponentB {
     }
     interface IntrinsicElements {
+        "hp5-faq-accordion": Hp5FaqAccordion;
+        "hp5-faq-accordion-container": Hp5FaqAccordionContainer;
         "my-component-a": MyComponentA;
         "my-component-b": MyComponentB;
     }
@@ -43,6 +67,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "hp5-faq-accordion": LocalJSX.Hp5FaqAccordion & JSXBase.HTMLAttributes<HTMLHp5FaqAccordionElement>;
+            "hp5-faq-accordion-container": LocalJSX.Hp5FaqAccordionContainer & JSXBase.HTMLAttributes<HTMLHp5FaqAccordionContainerElement>;
             "my-component-a": LocalJSX.MyComponentA & JSXBase.HTMLAttributes<HTMLMyComponentAElement>;
             "my-component-b": LocalJSX.MyComponentB & JSXBase.HTMLAttributes<HTMLMyComponentBElement>;
         }

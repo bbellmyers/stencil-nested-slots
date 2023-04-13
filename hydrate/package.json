@@ -1,0 +1,6 @@
+{
+  "name": "stencil-nested-slots/hydrate",
+  "description": "StencilNestedSlots component hydration app.",
+  "main": "index.js",
+  "types": "index.d.ts"
+}
